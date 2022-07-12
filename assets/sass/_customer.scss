@@ -1,0 +1,143 @@
+.customer{
+    &-header{
+        width: 100%;
+        max-width: 555px;
+        margin-bottom: 60px;
+    }
+
+    &-heading{
+        max-width: 447px;
+        margin: 0 auto 20px;
+
+    }
+
+    &-subheading{
+        line-height: 30px;
+    }
+
+    // &-list{
+    //     display: grid;
+    //     grid-template-columns: repeat(3,1fr);
+    //     grid-gap: 0 50px;
+    // }
+
+    &-item{
+        border: 2px solid #DDDDDD;
+        border-radius: 10px;
+        padding: 30px;
+        transition: all 0.25s linear;
+
+
+
+    }
+
+    .slick-current{
+        border-color: $color-primary ;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+
+    &-infor{
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    &-avt{
+        img{
+            display: block;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+    }
+
+    &-name{
+        position: absolute;
+        left: 70px;
+
+        h4{
+            font-weight: 500;
+            font-size: 18px;
+        }
+    }
+
+    &-rating{
+        display: flex;
+    }
+
+    &-review{
+        line-height: 30px;
+    }
+
+    // Slider
+
+    .slick-slider{
+        position: relative;
+
+    }
+
+    .slick-track{
+        display: flex;
+        gap: 0 40px;
+        margin-left: -20px;
+        margin-bottom: 60px;
+        
+    }
+
+    .slick-dots{
+        display: flex;
+        align-items: center;
+        gap: 0 15px;
+        transform: translate(10px,50%);
+      
+        button{
+            font-size: 0;
+            background-color: #ddd;
+            width: 15px;
+            height: 15px;
+            border-radius: 100rem;
+            transition: all 0.25s linear;
+        }
+    }
+
+    .slick-active{
+        button{
+            width: 45px;
+            background-color: $color-primary;
+
+        }
+    }
+
+    .slick-arrow{
+        position: absolute;
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+        bottom: 0;
+        transform: translateY(50%);
+        border-radius: 100rem;
+        border: 2px solid $color-primary;
+      
+    }
+
+    .slick-next{
+        right: 0;
+        width: 60px;
+        height: 60px;
+        border-radius: 100rem;
+        background-color: $color-primary;
+     
+   
+    }
+
+    .slick-prev{
+        right: 80px;
+        width: 60px;
+        height: 60px;
+        background-color: white;
+    }
+    
+}

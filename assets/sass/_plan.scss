@@ -1,0 +1,123 @@
+.plan{
+    padding: 80px 0 150px;
+    background: linear-gradient(#F6F6F6, white);
+    border-radius: 10px;
+
+    &-header{
+        width: 100%;
+        max-width: 555px;
+
+    }
+
+    &-heading{
+        margin-bottom: 20px;
+    }
+
+    &-subheading{
+        margin-bottom: 60px;
+    }
+
+    &-list{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    &-item{
+        position: relative;
+        text-align: center;
+        min-width: 330px;
+        min-height: 760px;
+        padding: 80px 70px 50px;
+        border: 2px solid #DDDDDD;
+        border-radius: 10px;
+    }
+
+    &-name{
+        margin: 30px;
+        font-size: 18px;
+        line-height: 30px;
+        color: $color-dark;
+    }
+
+    &-desc{
+        height: 30px;
+        display: flex;
+        align-items: center;
+        gap: 0 20px;
+    }
+
+    &-desc:not(:last-child)
+    {
+        margin-bottom: 10px;
+    }
+
+
+    &-icon{
+        color:#2FAB73;
+    }
+
+    &-add{
+        position: absolute;
+        bottom: 50px;
+
+        span{
+            color: $color-grey;
+            font-weight: 400;
+        }
+    }
+
+    &-price{
+        
+        font-size: 25px;
+        font-weight: 500;
+        line-height: 30px;
+        margin-bottom: 20px;
+        
+    }
+
+    &-select{
+     
+        border-width: 2px;
+        padding: 13px 63px;
+        
+        &:hover{
+            box-shadow: rgb(231 123 123) 0px 18px 52px 0px;
+        }
+ 
+    }
+
+    @media screen and(max-width: 1024px) {
+        &-list {
+        display: grid;
+        justify-content: flex-start;
+        grid-auto-columns: 310px;
+        grid-auto-flow: column;
+        grid-gap: 1.5rem;
+        overflow: auto;
+        overflow-y: hidden;
+        scroll-snap-type: x mandatory;
+        scroll-snap-stop: always;
+        -ms-touch-action: manipulation;
+        touch-action: manipulation;
+        -webkit-overflow-scrolling: touch;
+        scroll-padding: 1rem;
+        grid-template-columns: unset;
+        }
+        &-list::-webkit-scrollbar {
+          display: none;
+          width: 0;
+        }
+        &-list > *{
+          scroll-snap-align: start;
+        }
+    }
+
+
+    @media screen and(max-width: 767px) {
+        &-list {
+        grid-auto-columns: 90%;
+        }
+
+    }
+ 
+}
